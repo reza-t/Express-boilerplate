@@ -1,12 +1,7 @@
 const path = require('path');
-const nodeExternals = require('webpack-node-externals');
 
 module.exports = () => {
   const SERVER_PATH = './src/server.js';
-
-  const EXTERNALS = [
-    nodeExternals(),
-  ];
 
   return ({
     entry: {
@@ -23,7 +18,6 @@ module.exports = () => {
       __dirname: false,
       __filename: false,
     },
-    externals: EXTERNALS,
     module: {
       rules: [
         {
